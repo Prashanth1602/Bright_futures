@@ -1,0 +1,81 @@
+<!-- templates/home.html -->
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1 class="bright">Welcome to Bright Futures</h1>
+    
+    <!-- Form for user details submission -->
+    <form action="{{ url_for('submit_user_details') }}" method="post" class="user-form">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+   <!-- Success Stories Section -->
+<h2 class="success-header">Success Stories</h2>
+<div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col">
+        <div class="card">
+            <img src="/static/pexels-emre-akyol-320381804-17939186.jpg" class="card-img-top" alt="Success Story 1">
+            <div class="card-body">
+                <h5 class="card-title">Success Story 1: Anil's Path to Stability</h5>
+                <p class="card-text">
+                    Anil Kumar was struggling to find consistent work after moving to a new city. He turned to the Daily Wage Jobs section on 'Bright Futures', where he found several opportunities for construction laborers. Anil quickly applied for a position and secured a job with a local construction firm.
+                    
+                    His new role provided him with stable income and a sense of security, transforming his financial situation and allowing him to support his family comfortably.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <img src="/static/pexels-emre-akyol-320381804-17939186.jpg" class="card-img-top" alt="Success Story 2">
+            <div class="card-body">
+                <h5 class="card-title">Success Story 2: Kavita's Career Boost</h5>
+                <p class="card-text">Kavita Singh, a recent graduate, found herself in need of immediate income. She accessed the Daily Wage Jobs section and applied for a job as a warehouse worker. The position offered her both a competitive wage and valuable experience in the logistics sector.
+
+                    Kavita’s experience with the app not only helped her earn money but also opened doors for future career opportunities in warehouse management and logistics.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <img src="/static/pexels-emre-akyol-320381804-17939186.jpg" class="card-img-top" alt="Success Story 3">
+            <div class="card-body">
+                <h5 class="card-title">Success Story 3: Meera's New Start</h5>
+                <p class="card-text">Meera Rao, a single mother, needed flexible work to balance her family responsibilities. Through the Daily Wage Jobs section of 'Bright Futures', she found a position as a part-time delivery helper. The job allowed her to work according to her schedule, providing enough income to cover her expenses while giving her time for her child.
+
+                    Meera’s success with the app gave her the financial stability and flexibility she needed, greatly improving her quality of life.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <img src="/static/pexels-emre-akyol-320381804-17939186.jpg" class="card-img-top" alt="Success Story 4">
+            <div class="card-body">
+                <h5 class="card-title">Success Story 4: Suresh's Skillful Transition</h5>
+                <p class="card-text">Suresh Patel, previously unemployed, was eager to find work that matched his skills. He discovered a job listing for an electrician in the Daily Wage Jobs section. With his previous experience in the field, Suresh applied for the position and was hired immediately.
+
+                    The job provided Suresh with a reliable source of income and the opportunity to utilize his skills effectively, helping him regain his financial footing.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Small Scale Jobs{% endblock %}
+
+{% block content %}
+    <h2 class="bright">Small Scale Jobs</h2>
+    <form class="sort-form" action="{{ url_for('small_scale_jobs_section') }}" method="post">
+        <label for="sort_by">Sort by:</label>
+        <select id="sort_by" name="sort_by">
+            <option value="location">Location</option>
+            <option value="title">Title</option>
+        </select>
+        <button type="submit">Sort</button>
+    </form>
+    
+    <div class="job-listings">
+        {% for job in jobs %}
+        <div class="job-post">
+            <h3>{{ job['title'] }}</h3>
+            <p><strong>Location:</strong> {{ job['location'] }}</p>
+           <!-- Example form for job application -->
+<form action="{{ url_for('apply_for_job') }}" method="post">
+    <input type="hidden" name="job_title" value="{{ job['title'] }}">
+    <button type="submit">Apply Now</button>
+</form>
+
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}
